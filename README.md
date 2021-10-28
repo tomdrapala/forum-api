@@ -56,13 +56,13 @@ Post creation (by authenticated user):
 > curl -u \<username\> -X POST http://127.0.0.1:8000/api/posts/ -H "Content-Type: application/json" -d '{"title":"\<post-title\>","text":"\<post-content\>"}'
 
 Post update (by post author):
-> curl -u \<username\> -X PATCH http://127.0.0.1:8000/api/posts/\<id\>/ -H "Content-Type: application/json" -d '{"\<parameter\>":"\<new-value\>"}'
+> curl -u \<username\> -X PATCH http://127.0.0.1:8000/api/posts/[id]/ -H "Content-Type: application/json" -d '{"\<parameter\>":"\<new-value\>"}'
 
 Post deletion (by post author):
-> curl -u \<username\> -X DELETE http://127.0.0.1:8000/api/posts/\<id\>/
+> curl -u \<username\> -X DELETE http://127.0.0.1:8000/api/posts/[id]/
 
 Liking a post (by authenticated user):
-> curl -u \<username\> -X POST http://127.0.0.1:8000/api/posts/\<id\>/like/
+> curl -u \<username\> -X POST http://127.0.0.1:8000/api/posts/[id]/like/
 
 User list (by authenticated user):
 > curl -u \<username\> http://127.0.0.1:8000/api/users/
