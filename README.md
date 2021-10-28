@@ -12,13 +12,13 @@ Django web application providing an API for a simple discussion service (discuss
 
 A virtual environment such as [venv](https://docs.python.org/3/library/venv.html) is recommended.
 
-> python3 -m venv <environment-name>
+> python3 -m venv \<environment-name\>
 
 Environment activation on Linux/Mac:
-> source <environment-name>/bin/activate
+> source \<environment-name\>/bin/activate
 
 Environment activation on Windows:
-> <environment-name>\Scripts\activate.bat
+> \<environment-name\>\Scripts\activate.bat
 
 Required libraries are listed in the **requirements.txt** file included in this repository.  
 **After activating** the environment run: 
@@ -39,11 +39,11 @@ The app is running on a local server (by default http://127.0.0.1:8000/) that ca
 ---
  
 - **api/users/** - user list
-- **api/users/[id]/** - user details
+- **api/users/\<id\>/** - user details
 - **api/user-create/** - user creation
 - **api/posts/** - post list
-- **api/posts/[id]/** - post details
-- **api/posts/[id]/like/** - post like
+- **api/posts/\<id\>/** - post details
+- **api/posts/\<id\>/like/** - post like
 
 ## CURL Examples
 
@@ -53,20 +53,20 @@ Post list:
 > curl http://127.0.0.1:8000/api/posts/
 
 Post creation (by authenticated user):
-> curl -u [username] -X POST http://127.0.0.1:8000/api/posts/ -H "Content-Type: application/json" -d '{"title":"[post-title]","text":"[post-content]"}'
+> curl -u \<username\> -X POST http://127.0.0.1:8000/api/posts/ -H "Content-Type: application/json" -d '{"title":"\<post-title\>","text":"\<post-content\>"}'
 
 Post update (by post author):
-> curl -u [username] -X PATCH http://127.0.0.1:8000/api/posts/[id]/ -H "Content-Type: application/json" -d '{"[parameter]":"[new-value]"}'
+> curl -u \<username\> -X PATCH http://127.0.0.1:8000/api/posts/[id]/ -H "Content-Type: application/json" -d '{"\<parameter\>":"\<new-value\>"}'
 
 Post deletion (by post author):
-> curl -u [username] -X DELETE http://127.0.0.1:8000/api/posts/[id]/
+> curl -u \<username\> -X DELETE http://127.0.0.1:8000/api/posts/[id]/
 
 Liking a post (by authenticated user):
-> curl -u [username] -X POST http://127.0.0.1:8000/api/posts/[id]/like/
+> curl -u \<username\> -X POST http://127.0.0.1:8000/api/posts/[id]/like/
 
 User list (by authenticated user):
-> curl -u [username] http://127.0.0.1:8000/api/users/
+> curl -u \<username\> http://127.0.0.1:8000/api/users/
 
 Following endpoint is for user creation. This solution is not perfect, and **I would not use nor recommend using it in a real project**.
 It was created just to enable fast and easy User creation method, to facilitate application testing.
-> curl -X POST http://127.0.0.1:8000/api/user-create/ -H "Content-Type: application/json" -d '{"username":"[username]","password":"[password]"}'
+> curl -X POST http://127.0.0.1:8000/api/user-create/ -H "Content-Type: application/json" -d '{"username":"\<username\>","password":"\<password\>"}'
