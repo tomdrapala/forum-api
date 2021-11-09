@@ -1,4 +1,4 @@
-# Predict Systems - discussion forum
+# API discussion forum
 
 ---
 
