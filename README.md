@@ -1,14 +1,11 @@
 # API discussion forum
 
----
-
 Django web application providing an API for a simple discussion service (discussion forum with a single thread).   
 
 **Tech Stack:** Django, Django Rest Framework
 
-## Installation
 
----
+## Installation
 
 A virtual environment such as [venv](https://docs.python.org/3/library/venv.html) is recommended.
 
@@ -35,8 +32,6 @@ The app is running on a local server (by default http://127.0.0.1:8000/) that ca
 
 
 ## Endpoints
-
----
  
 - **api/users/** - user list
 - **api/users/\<id\>/** - user details
@@ -45,9 +40,8 @@ The app is running on a local server (by default http://127.0.0.1:8000/) that ca
 - **api/posts/\<id\>/** - post details
 - **api/posts/\<id\>/like/** - post like
 
-## CURL Examples
 
----
+## CURL Examples
 
 Post list:
 > curl http://127.0.0.1:8000/api/posts/
